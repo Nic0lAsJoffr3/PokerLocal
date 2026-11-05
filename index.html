@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>PokerLocal — Jogue poker com seus amigos</title>
+  <meta
+    name="description"
+    content="PokerLocal é uma plataforma para criar mesas privadas de poker com amigos. Defina fichas, blinds e regras, entre pelo código da sala e jogue em tempo real."
+  />
+  <meta
+    name="keywords"
+    content="poker, poker online, poker com amigos, mesa de poker, poker local, poker privado, poker grátis"
+  />
+  <meta name="author" content="Nicolas Joffre" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#12161a" />
+
+  <link rel="canonical" href="https://poker.nicolasjoffre.com.br/" />
+
+  <link rel="icon" href="assets/icon.ico" type="image/x-icon" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PokerLocal" />
+  <meta property="og:title" content="PokerLocal — Jogue poker com seus amigos" />
+  <meta
+    property="og:description"
+    content="Crie uma mesa privada de poker, defina fichas e blinds, compartilhe o código da sala e jogue em tempo real com seus amigos."
+  />
+  <meta property="og:url" content="https://poker.nicolasjoffre.com.br/" />
+  <meta property="og:image" content="https://poker.nicolasjoffre.com.br/assets/icon.ico" />
+  <meta property="og:image:alt" content="PokerLocal — plataforma de poker para amigos" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PokerLocal — Jogue poker com seus amigos" />
+  <meta
+    name="twitter:description"
+    content="Crie uma mesa privada de poker, defina fichas e blinds, compartilhe o código da sala e jogue em tempo real com seus amigos."
+  />
+  <meta name="twitter:image" content="https://poker.nicolasjoffre.com.br/assets/icon.ico" />
+  <meta name="twitter:image:alt" content="PokerLocal — plataforma de poker para amigos" />
+
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="/">
+      <img
+        class="logo-icon"
+        src="assets/icon.ico"
+        alt="Ícone do PokerLocal"
+        width="42"
+        height="42"
+      />
+      <span>PokerLocal</span>
+    </a>
+
+    <button
+      class="settings-button"
+      id="settings-button"
+      aria-label="Abrir configurações"
+      title="Configurações"
+      type="button"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="3"></circle>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+      </svg>
+    </button>
+  </header>
+
+  <main class="home">
+    <section class="hero">
+      <h1>Poker entre amigos,<br />direto do navegador</h1>
+
+      <p>
+        Crie uma mesa privada, defina fichas e blinds, compartilhe o código
+        da sala e jogue em tempo real. Sem dinheiro real.
+      </p>
+
+      <div class="menu-buttons">
+        <button class="primary-button" id="create-game-button" type="button">
+          Criar partida
+        </button>
+
+        <button class="secondary-button" id="join-game-button" type="button">
+          Entrar em uma partida
+        </button>
+      </div>
+
+      <div class="rules">
+        <article class="rule-card">
+          <strong>Mesa privada</strong>
+          <span>O host define fichas iniciais, blinds e regras de aposta.</span>
+        </article>
+
+        <article class="rule-card">
+          <strong>Código da sala</strong>
+          <span>Os amigos entram rapidamente usando o código da partida.</span>
+        </article>
+
+        <article class="rule-card">
+          <strong>Tempo real</strong>
+          <span>Todos veem pote, fichas, posições e ações atualizadas.</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Desenvolvido por
+      <a
+        href="https://nicolasjoffre.com.br/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Nicolas Joffre
+      </a>
+    </p>
+
+    <p class="footer-domain">
+      <a href="https://poker.nicolasjoffre.com.br/">
+        poker.nicolasjoffre.com.br
+      </a>
+    </p>
+  </footer>
+
+  <script src="JS/theme.js"></script>
+  <script src="JS/index.js"></script>
+</body>
+</html>

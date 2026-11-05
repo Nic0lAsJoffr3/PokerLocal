@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sala — PokerLocal</title>
+  <meta
+    name="description"
+    content="Sala privada de poker no PokerLocal. Controle fichas, turnos, apostas e pote em uma mesa presencial."
+  />
+  <meta name="author" content="Nicolas Joffre" />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#12161a" />
+
+  <link rel="canonical" href="https://poker.nicolasjoffre.com.br/sala.html" />
+
+  <link rel="icon" href="assets/icon.ico" type="image/x-icon" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PokerLocal" />
+  <meta property="og:title" content="Sala — PokerLocal" />
+  <meta
+    property="og:description"
+    content="Acompanhe sua mesa privada de poker no PokerLocal."
+  />
+  <meta property="og:url" content="https://poker.nicolasjoffre.com.br/sala.html" />
+  <meta property="og:image" content="https://poker.nicolasjoffre.com.br/assets/icon.ico" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sala — PokerLocal" />
+  <meta
+    name="twitter:description"
+    content="Acompanhe sua mesa privada de poker no PokerLocal."
+  />
+  <meta name="twitter:image" content="https://poker.nicolasjoffre.com.br/assets/icon.ico" />
+
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="/">
+      <img
+        class="logo-icon"
+        src="assets/icon.ico"
+        alt="Ícone do PokerLocal"
+        width="42"
+        height="42"
+      />
+      <span>PokerLocal</span>
+    </a>
+
+    <button class="settings-button" id="settings-button" type="button" aria-label="Abrir configurações">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="3"></circle>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+      </svg>
+    </button>
+  </header>
+
+  <main class="config">
+    <section class="config-card">
+    <div class="room-header">
+  <div>
+    <h1 id="room-name">Carregando mesa...</h1>
+    <p>
+      Código: <strong id="room-code">—</strong>
+      <br />
+      Fase: <strong id="room-stage">—</strong>
+    </p>
+  </div>
+
+<div class="pot-box">
+  <span>Pote</span>
+  <strong id="room-pot">0</strong>
+
+  <div class="my-info">
+    <span>Minha aposta</span>
+    <strong id="my-bet">0</strong>
+
+    <span>Minhas fichas</span>
+    <strong id="my-stack">—</strong>
+
+    <div id="my-positions" class="position-badges"></div>
+  </div>
+</div>
+</div>
+<div class="eliminated-banner hidden" id="eliminated-banner">
+  Você perdeu todas as fichas
+</div>
+<div class="game-winner hidden" id="game-winner">
+  <strong id="game-winner-text">Vencedor do jogo</strong>
+</div>
+
+      <div class="config-section">
+        <h2>Jogadores</h2>
+        <div id="players-list" class="players-list"></div>
+      </div>
+
+      <div class="config-section hidden" id="host-controls">
+        <h2>Controles do host</h2>
+
+        <button class="primary-button" id="start-hand-button" type="button">
+          Iniciar mão
+        </button>
+
+        <div class="winner-control hidden" id="winner-control">
+          <label for="winner-select">Vencedor da mão</label>
+
+          <select id="winner-select"></select>
+
+          <button class="primary-button" id="confirm-winner-button" type="button">
+            Confirmar vencedor
+          </button>
+        </div>
+      </div>
+
+      <div class="config-section hidden" id="action-controls">
+        <h2>Sua vez</h2>
+
+        <p id="action-info" class="config-hint"></p>
+
+        <div class="action-buttons">
+          <button class="secondary-button" id="fold-button" type="button">
+            Desistir
+          </button>
+
+          <button class="secondary-button" id="check-button" type="button">
+            Passar
+          </button>
+
+          <button class="secondary-button" id="call-button" type="button">
+            Pagar
+          </button>
+
+          <button class="secondary-button" id="all-in-button" type="button">
+            All-in
+          </button>
+        </div>
+
+        <div class="raise-control">
+          <label for="raise-input">Aumentar para</label>
+
+          <input
+            type="number"
+            id="raise-input"
+            min="0"
+            value="0"
+          />
+
+          <button class="primary-button" id="raise-button" type="button">
+            Aumentar
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Desenvolvido por
+      <a
+        href="https://nicolasjoffre.com.br/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Nicolas Joffre
+      </a>
+    </p>
+
+    <p class="footer-domain">
+      <a href="https://poker.nicolasjoffre.com.br/">poker.nicolasjoffre.com.br</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="JS/supabase.js"></script>
+  <script src="JS/theme.js"></script>
+  <script src="JS/sala.js"></script>
+</body>
+</html>

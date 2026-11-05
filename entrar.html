@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Entrar em uma partida — PokerLocal</title>
+  <meta
+    name="description"
+    content="Entre em uma mesa privada de poker no PokerLocal usando o código da sala."
+  />
+  <meta name="author" content="Nicolas Joffre" />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#12161a" />
+
+  <link rel="canonical" href="https://poker.nicolasjoffre.com.br/entrar.html" />
+
+  <link rel="icon" href="assets/icon.ico" type="image/x-icon" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PokerLocal" />
+  <meta property="og:title" content="Entrar em uma partida — PokerLocal" />
+  <meta
+    property="og:description"
+    content="Entre em uma mesa privada de poker usando o código da sala."
+  />
+  <meta property="og:url" content="https://poker.nicolasjoffre.com.br/entrar.html" />
+  <meta property="og:image" content="https://poker.nicolasjoffre.com.br/assets/icon.ico" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Entrar em uma partida — PokerLocal" />
+  <meta
+    name="twitter:description"
+    content="Entre em uma mesa privada de poker usando o código da sala."
+  />
+  <meta name="twitter:image" content="https://poker.nicolasjoffre.com.br/assets/icon.ico" />
+
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="/">
+      <img
+        class="logo-icon"
+        src="assets/icon.ico"
+        alt="Ícone do PokerLocal"
+        width="42"
+        height="42"
+      />
+      <span>PokerLocal</span>
+    </a>
+
+    <a class="back-button" href="/">Voltar</a>
+  </header>
+
+  <main class="config">
+    <section class="config-card">
+      <h1>Entrar em uma partida</h1>
+      <p>Informe o código da sala para entrar.</p>
+
+      <form id="join-form" class="host-form">
+        <div class="form-field">
+          <label for="room-code-input">Código da sala</label>
+          <input
+            type="text"
+            id="room-code-input"
+            name="room-code"
+            placeholder="ABC123"
+            maxlength="6"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <button class="primary-button" id="join-button" type="submit">
+          Entrar na mesa
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Desenvolvido por
+      <a
+        href="https://nicolasjoffre.com.br/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Nicolas Joffre
+      </a>
+    </p>
+
+    <p class="footer-domain">
+      <a href="https://poker.nicolasjoffre.com.br/">poker.nicolasjoffre.com.br</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="JS/supabase.js"></script>
+  <script src="JS/theme.js"></script>
+  <script src="JS/entrar.js"></script>
+</body>
+</html>

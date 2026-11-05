@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Configurações — PokerLocal</title>
+  <meta
+    name="description"
+    content="Personalize o PokerLocal escolhendo seu nome, o tema claro, escuro ou noite e a cor principal da interface."
+  />
+  <meta name="author" content="Nicolas Joffre" />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#12161a" />
+
+  <link rel="canonical" href="https://poker.nicolasjoffre.com.br/config.html" />
+
+  <link rel="icon" href="assets/icon.ico" type="image/x-icon" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PokerLocal" />
+  <meta property="og:title" content="Configurações — PokerLocal" />
+  <meta
+    property="og:description"
+    content="Escolha seu nome, o tema e a cor principal da sua experiência no PokerLocal."
+  />
+  <meta property="og:url" content="https://poker.nicolasjoffre.com.br/config.html" />
+  <meta property="og:image" content="https://poker.nicolasjoffre.com.br/assets/icon.ico" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Configurações — PokerLocal" />
+  <meta
+    name="twitter:description"
+    content="Escolha seu nome, o tema e a cor principal da sua experiência no PokerLocal."
+  />
+  <meta name="twitter:image" content="https://poker.nicolasjoffre.com.br/assets/icon.ico" />
+
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="/">
+      <img
+        class="logo-icon"
+        src="assets/icon.ico"
+        alt="Ícone do PokerLocal"
+        width="42"
+        height="42"
+      />
+      <span>PokerLocal</span>
+    </a>
+
+    <a class="back-button" href="/">Voltar</a>
+  </header>
+
+  <main class="config">
+    <section class="config-card">
+      <h1>Configurações</h1>
+      <p>Personalize a aparência e seu nome no PokerLocal.</p>
+
+      <div class="config-section">
+        <h2>Seu nome</h2>
+
+        <div class="name-control">
+          <input
+            type="text"
+            id="player-name-input"
+            maxlength="30"
+            placeholder="Seu nome"
+          />
+
+          <button class="secondary-button" id="generate-name-button" type="button">
+            Gerar nome
+          </button>
+        </div>
+      </div>
+
+      <div class="config-section">
+        <h2>Tema</h2>
+
+        <div class="theme-buttons">
+          <button class="theme-button" data-theme="light" type="button">
+            Claro
+          </button>
+
+          <button class="theme-button" data-theme="dark" type="button">
+            Escuro
+          </button>
+
+          <button class="theme-button" data-theme="night" type="button">
+            Noite
+          </button>
+        </div>
+      </div>
+
+      <div class="config-section">
+        <h2>Cor principal</h2>
+        <p class="config-hint">Escolha uma das 10 cores disponíveis.</p>
+
+        <div class="color-grid" id="color-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cookie-banner" id="cookie-banner">
+    <p>
+      Usamos cookies apenas para salvar seu nome, tema e cor principal neste
+      navegador. Não utilizamos cookies para rastreamento ou publicidade.
+    </p>
+
+    <button class="primary-button" id="accept-cookies" type="button">
+      Entendi
+    </button>
+  </div>
+
+  <footer class="footer">
+    <p>
+      Desenvolvido por
+      <a
+        href="https://nicolasjoffre.com.br/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Nicolas Joffre
+      </a>
+    </p>
+
+    <p class="footer-domain">
+      <a href="https://poker.nicolasjoffre.com.br/">poker.nicolasjoffre.com.br</a>
+    </p>
+  </footer>
+
+  <script src="JS/theme.js"></script>
+  <script src="JS/config.js"></script>
+</body>
+</html>

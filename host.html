@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Criar partida — PokerLocal</title>
+  <meta
+    name="description"
+    content="Crie uma mesa privada de poker no PokerLocal. Defina fichas iniciais, blinds, ante, incremento e limites de raise."
+  />
+  <meta name="author" content="Nicolas Joffre" />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#12161a" />
+
+  <link rel="canonical" href="https://poker.nicolasjoffre.com.br/host.html" />
+
+  <link rel="icon" href="assets/icon.ico" type="image/x-icon" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PokerLocal" />
+  <meta property="og:title" content="Criar partida — PokerLocal" />
+  <meta
+    property="og:description"
+    content="Crie uma mesa privada de poker e defina as regras da partida."
+  />
+  <meta property="og:url" content="https://poker.nicolasjoffre.com.br/host.html" />
+  <meta property="og:image" content="https://poker.nicolasjoffre.com.br/assets/icon.ico" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Criar partida — PokerLocal" />
+  <meta
+    name="twitter:description"
+    content="Crie uma mesa privada de poker e defina as regras da partida."
+  />
+  <meta name="twitter:image" content="https://poker.nicolasjoffre.com.br/assets/icon.ico" />
+
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="/">
+      <img
+        class="logo-icon"
+        src="assets/icon.ico"
+        alt="Ícone do PokerLocal"
+        width="42"
+        height="42"
+      />
+      <span>PokerLocal</span>
+    </a>
+
+    <a class="back-button" href="/">Voltar</a>
+  </header>
+
+  <main class="config">
+    <section class="config-card">
+      <h1>Criar partida</h1>
+      <p>Defina as regras da sua mesa privada.</p>
+
+      <form id="host-form" class="host-form">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="room-name">Nome da mesa</label>
+            <input
+              type="text"
+              id="room-name"
+              name="room-name"
+              placeholder="Mesa dos amigos"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="max-players">Máximo de jogadores</label>
+            <input
+              type="number"
+              id="max-players"
+              name="max-players"
+              min="2"
+              max="10"
+              value="6"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="buy-in">Fichas iniciais</label>
+            <input
+              type="number"
+              id="buy-in"
+              name="buy-in"
+              min="1"
+              value="1000"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="checkbox-group">
+          <label class="checkbox-field">
+            <input type="checkbox" id="has-dealer" checked />
+            <span>Dealer</span>
+          </label>
+
+          <label class="checkbox-field">
+            <input type="checkbox" id="has-small-blind" checked />
+            <span>Small Blind</span>
+          </label>
+
+          <label class="checkbox-field">
+            <input type="checkbox" id="has-big-blind" checked />
+            <span>Big Blind</span>
+          </label>
+        </div>
+
+        <div class="slider-group" id="small-blind-group">
+          <div class="slider-header">
+            <label for="small-blind">Small Blind</label>
+            <input
+              type="number"
+              id="small-blind"
+              name="small-blind"
+              min="1"
+              value="10"
+              required
+            />
+          </div>
+
+          <input
+            type="range"
+            id="small-blind-slider"
+            class="range-input"
+            min="1"
+            value="10"
+            required
+          />
+        </div>
+
+        <div class="slider-group" id="big-blind-group">
+          <div class="slider-header">
+            <label for="big-blind">Big Blind</label>
+            <input
+              type="number"
+              id="big-blind"
+              name="big-blind"
+              min="1"
+              value="20"
+              required
+            />
+          </div>
+
+          <input
+            type="range"
+            id="big-blind-slider"
+            class="range-input"
+            min="1"
+            value="20"
+            required
+          />
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="ante">Ante</label>
+            <input
+              type="number"
+              id="ante"
+              name="ante"
+              min="0"
+              value="0"
+              required
+            />
+          </div>
+
+          <input
+            type="range"
+            id="ante-slider"
+            class="range-input"
+            min="0"
+            value="0"
+            required
+          />
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="blind-increment">Incremento dos blinds por mão</label>
+            <input
+              type="number"
+              id="blind-increment"
+              name="blind-increment"
+              min="0"
+              value="0"
+              required
+            />
+          </div>
+
+          <input
+            type="range"
+            id="blind-increment-slider"
+            class="range-input"
+            min="0"
+            value="0"
+            required
+          />
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="minimum-raise">Raise mínimo</label>
+            <input
+              type="number"
+              id="minimum-raise"
+              name="minimum-raise"
+              min="1"
+              value="20"
+              required
+            />
+          </div>
+
+          <input
+            type="range"
+            id="minimum-raise-slider"
+            class="range-input"
+            min="1"
+            value="20"
+            required
+          />
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="maximum-raise">Raise máximo</label>
+            <input
+              type="number"
+              id="maximum-raise"
+              name="maximum-raise"
+              min="1"
+              value="1000"
+              required
+            />
+          </div>
+
+          <input
+            type="range"
+            id="maximum-raise-slider"
+            class="range-input"
+            min="1"
+            value="1000"
+            required
+          />
+        </div>
+
+        <button class="primary-button" type="submit">
+          Criar mesa
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Desenvolvido por
+      <a
+        href="https://nicolasjoffre.com.br/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Nicolas Joffre
+      </a>
+    </p>
+
+    <p class="footer-domain">
+      <a href="https://poker.nicolasjoffre.com.br/">poker.nicolasjoffre.com.br</a>
+    </p>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="JS/supabase.js"></script>
+<script src="JS/theme.js"></script>
+<script src="JS/host.js"></script>
+</body>
+</html>
